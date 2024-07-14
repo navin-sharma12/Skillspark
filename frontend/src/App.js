@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from "./MainPage/mainpage.js";
 import Salsa from "./MainPage/components/salsa.js";
@@ -19,8 +19,22 @@ import Soccer from "./MainPage/components/soccer.js";
 import Painting from "./MainPage/components/painting.js";
 import Knitting from "./MainPage/components/knitting.js";
 import Pottery from "./MainPage/components/pottery.js";
+import Admin from "./Admin/js/admin.js";
+import LoginAdmin from "./Admin/js/login.js";
+import AddAdmin from "./Admin/js/add.js";
+import AdminClassesApproval from "./Admin/js/classesApproval.js";
+import AdminClassesDetails from "./Admin/js/classesDetails.js";
+import UserAdmin from "./Admin/js/user.js";
+import UpdateClassesAdmin from "./Admin/js/classesUpdate";
+import UpdateUserAdmin from "./Admin/js/userUpdate.js";
+import UpdateAdmin from "./Admin/js/update.js";
+import DashboardAdmin from "./Admin/js/dashboard.js";
 
 export default function App() {
+  const [isLoggedInAdmin, setIsLoggedInAdmin] = useState(false)
+  function handleLogin(value) {
+    setIsLoggedInAdmin(value)
+  }
   return (
     <Router>
       <Routes>
@@ -43,6 +57,20 @@ export default function App() {
         <Route exact path="/painting" element={<Painting />}></Route>
         <Route exact path="/knitting" element={<Knitting />}></Route>
         <Route exact path="/pottery" element={<Pottery />}></Route>
+        <Route exact path="/loginAdmin" element={<LoginAdmin handleLogin={handleLogin} />}></Route>
+        {isLoggedInAdmin === true &&
+          <>
+            <Route exact path="/dashboard" element={<DashboardAdmin />}></Route>
+            <Route exact path="/admin" element={<Admin />}></Route>
+            <Route exact path="/classesApproval" element={<AdminClassesApproval />}></Route>
+            <Route exact path="/classes" element={<AdminClassesDetails />}></Route>
+            <Route exact path="/addAdmin" element={<AddAdmin />}></Route>
+            <Route exact path="/updateAdmin" element={<UpdateAdmin />}></Route>
+            <Route exact path="/user" element={<UserAdmin />}></Route>updateClasses
+            <Route exact path="/updateClasses" element={<UpdateClassesAdmin />}></Route>
+            <Route exact path="/updateUser" element={<UpdateUserAdmin />}></Route>
+          </>
+        }
       </Routes>
     </Router>
   );
