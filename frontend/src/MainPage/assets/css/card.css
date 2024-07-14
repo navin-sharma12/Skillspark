@@ -1,0 +1,117 @@
+.display-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  margin-left: 5%; /* reduce left margin */
+  margin-right: 1%; /* reduce right margin */
+}
+
+.display-card-img img {
+  width: 100%;
+  height: auto;
+}
+
+.display-card-container {
+  border-radius: 10px;
+  background: white;
+
+
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-right: 12px;
+  width: calc((100% / 3) - 30px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+}
+
+.display-card-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.display-card-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.display-card-container .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.display-card-container .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.display-card-container .card-actions a {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.display-card-container .card-actions a:hover {
+  background-color: #3e8e41;
+}
+
+
+.display-card-container h3 {
+  margin: 10px;
+  color: #000;
+  font-weight:200;
+}
+
+.display-card-container p {
+  margin: 10px;
+  color: #323030;
+  font-weight: 800;
+}
+
+.display-card-container b p {
+    color: #ffb03b;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#amount{
+  font-size: 30px;
+  font-weight: 900;
+  color: #3e8e41;
+}
+
+/* button {
+  background-color: #ffb03b;
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 20px; 
+    display: block; 
+    margin: 0 auto; 
+    width: 70px;
+  }
+
+
+button:hover {
+  background-color: #000000;
+} */
+
+.salsa-button {
+  width: 40%;
+  display: block;
+  margin: 0 auto; 
+}

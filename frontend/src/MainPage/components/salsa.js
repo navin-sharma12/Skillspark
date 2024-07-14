@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar.js";
-import Card from "./Card.jsx";
 import salsa from "../assets/img/salsa.png";
 import salsa1 from "../assets/img/salsa1.jpeg";
-import instagram from "../../Admin/images/instagram.png";
-import { Link } from "react-router-dom";
+import BackToTop from "../backToTop.js";
+import Footer from "../footer.js";
 
 const Salsa = () => {
 
@@ -51,7 +50,7 @@ const Salsa = () => {
                         <div className="top-classes-content">
                             <p>
                                 <p className="salsa-classes-title">
-                                Find your rhythm with Salsa!
+                                    Find your rhythm with Salsa!
                                 </p>
                                 Salsa is a popular Latin dance that involves intricate footwork
                                 and
@@ -101,42 +100,8 @@ const Salsa = () => {
                 </div>
             </div>
             <br></br>
-            <footer id="footer">
-                <div className="container">
-                    <h3>Skill Spark</h3>
-                    <p>Experience the freedom of variety with Skill Spark</p>
-                    <div className="social-links">
-                        <Link to="/#" className="twitter">
-                            <i className="bx bxl-twitter"></i>
-                        </Link>
-                        <Link to="/#" className="facebook">
-                            <i className="bx bxl-facebook"></i>
-                        </Link>
-                        <Link to="/#" className="instagram">
-                            <i className="bx bxl-instagram"></i>
-                        </Link>
-                        <Link to="/#" className="google-plus">
-                            <i className="bx bxl-skype"></i>
-                        </Link>
-                        <Link to="/#" className="linkedin">
-                            <i className="bx bxl-linkedin"></i>
-                        </Link>
-                    </div>
-                    <div className="copyright">
-                        &copy; Copyright{" "}
-                        <strong>
-                            <span style={{ color: "#ffb03b" }}>Skill Spark</span>
-                        </strong>
-                        . All Rights Reserved
-                    </div>
-                </div>
-            </footer>
-            <Link
-                to="/#"
-                className="back-to-top d-flex align-items-center justify-content-center"
-            >
-                <i className="bi bi-arrow-up-short"></i>
-            </Link>
+            <Footer />
+            <BackToTop />
         </div>
     );
 };

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar.js";
-import Card from "./Card.jsx";
 import baking from "../assets/img/baking.png";
 import baking1 from "../assets/img/baking1.jpeg";
-import instagram from "../../Admin/images/instagram.png";
-import { Link } from "react-router-dom";
+import BackToTop from "../backToTop.js";
+import Footer from "../footer.js";
 
 const Baking = () => {
 
@@ -52,8 +51,8 @@ const Baking = () => {
                         <div className="top-classes-content">
                             <p>
                                 <p className="salsa-classes-title">
-                                Bake your way to happiness with our fun and<br />
-                                delicious Baking classes!
+                                    Bake your way to happiness with our fun and<br />
+                                    delicious Baking classes!
                                 </p>
                                 Discover the magic of baking with our classes, where flour, sugar, and<br />
                                 butter come together to create delicious masterpieces. Join our community<br />
@@ -100,42 +99,8 @@ const Baking = () => {
                 </div>
             </div>
             <br></br>
-            <footer id="footer">
-                <div className="container">
-                    <h3>Skill Spark</h3>
-                    <p>Experience the freedom of variety with Skill Spark</p>
-                    <div className="social-links">
-                        <Link to="/#" className="twitter">
-                            <i className="bx bxl-twitter"></i>
-                        </Link>
-                        <Link to="/#" className="facebook">
-                            <i className="bx bxl-facebook"></i>
-                        </Link>
-                        <Link to="/#" className="instagram">
-                            <i className="bx bxl-instagram"></i>
-                        </Link>
-                        <Link to="/#" className="google-plus">
-                            <i className="bx bxl-skype"></i>
-                        </Link>
-                        <Link to="/#" className="linkedin">
-                            <i className="bx bxl-linkedin"></i>
-                        </Link>
-                    </div>
-                    <div className="copyright">
-                        &copy; Copyright{" "}
-                        <strong>
-                            <span style={{ color: "#ffb03b" }}>Skill Spark</span>
-                        </strong>
-                        . All Rights Reserved
-                    </div>
-                </div>
-            </footer>
-            <Link
-                to="/#"
-                className="back-to-top d-flex align-items-center justify-content-center"
-            >
-                <i className="bi bi-arrow-up-short"></i>
-            </Link>
+            <Footer />
+            <BackToTop />
         </div>
     );
 };

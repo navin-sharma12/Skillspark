@@ -51,50 +51,50 @@ export default function CustomNavbar() {
                                     <li class="dropdown">
                                         <Link href="#"><span>Dance</span> <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Salsa</Link></li>
-                                            <li><Link href="#">Hip-Hop</Link></li>
-                                            <li><Link href="#">Ballet</Link></li>
+                                            <li><Link to="/salsa">Salsa</Link></li>
+                                            <li><Link to="/hip-hop">Hip-Hop</Link></li>
+                                            <li><Link to="/ballet">Ballet</Link></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <Link href="#"><span>Cooking</span> <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Baking</Link></li>
-                                            <li><Link href="#">Healthy Cooking</Link></li>
-                                            <li><Link href="#">Kids Cooking</Link></li>
+                                            <li><Link to="/baking">Baking</Link></li>
+                                            <li><Link to="/healthy-cooking">Healthy Cooking</Link></li>
+                                            <li><Link to="/kids-cooking">Kids Cooking</Link></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <Link href="#"><span>Fitness</span> <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Zumba</Link></li>
-                                            <li><Link href="#">Aerobics</Link></li>
-                                            <li><Link href="#">Pilates</Link></li>
+                                            <li><Link to="/zumba">Zumba</Link></li>
+                                            <li><Link to="/aerobics">Aerobics</Link></li>
+                                            <li><Link to="/pilates">Pilates</Link></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <Link href="#"><span>Outdoor</span> <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Hiking</Link></li>
-                                            <li><Link href="#">Rock Climbing</Link></li>
-                                            <li><Link href="#">Horse Riding</Link></li>
+                                            <li><Link to="/hiking">Hiking</Link></li>
+                                            <li><Link to="/rock-climbing">Rock Climbing</Link></li>
+                                            <li><Link to="/horse-riding">Horse Riding</Link></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <Link href="#"><span>Sports</span> <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Cricket</Link></li>
-                                            <li><Link href="#">Football</Link></li>
-                                            <li><Link href="#">Soccer</Link></li>
+                                            <li><Link to="/cricket">Cricket</Link></li>
+                                            <li><Link to="/football">Football</Link></li>
+                                            <li><Link to="/soccer">Soccer</Link></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <Link href="#"><span>Arts and Crafts</span>
                                             <i class="bi bi-chevron-right"></i></Link>
                                         <ul>
-                                            <li><Link href="#">Painting</Link></li>
-                                            <li><Link href="#">Knitting</Link></li>
-                                            <li><Link href="#">Pottery</Link></li>
+                                            <li><Link to="/painting">Painting</Link></li>
+                                            <li><Link to="/knitting">Knitting</Link></li>
+                                            <li><Link to="/pottery">Pottery</Link></li>
                                         </ul>
                                     </li>
                                 </ul>
