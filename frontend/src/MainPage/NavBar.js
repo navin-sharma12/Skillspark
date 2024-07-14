@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import logo from "./assets/img/Skillspark.png";
 import "./assets/vendor/animate.css/animate.min.css";
@@ -10,28 +10,9 @@ import "./assets/vendor/swiper/swiper-bundle.min.css";
 import "./assets/css/style.css";
 
 export default function CustomNavbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            if (scrollTop > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
         <div className='classBody'>
-            <header id="header" className={isScrolled ? 'fixed-top d-flex align-items-center header-scrolled' : 'fixed-top d-flex align-items-center header-transparent'}>
+            <header id="header" className="fixed-top d-flex align-items-center header-transparent">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
                     <div class="logo me-auto">
                         <h1>
