@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CustomNavbar from "./NavBar.js";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Form } from 'react-bootstrap';
@@ -30,7 +30,8 @@ import "./assets/vendor/boxicons/css/boxicons.min.css";
 import "./assets/vendor/glightbox/css/glightbox.min.css";
 import "./assets/vendor/swiper/swiper-bundle.min.css";
 import "./assets/css/style.css";
-
+import Footer from "./footer.js";
+import BackToTop from "./backToTop.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 import "swiper/css";
@@ -38,24 +39,7 @@ import "swiper/css";
 SwiperCore.use([Autoplay, Pagination]);
 
 export default function MainPage() {
-    const [isVisible, setIsVisible] = useState(false);
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
     useEffect(() => {
-
-        const toggleVisibility = () => {
-            if (window.pageYOffset > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
-
-        window.addEventListener('scroll', toggleVisibility);
 
         const iso = new Isotope('.menu-container', {
             itemSelector: '.menu-item',
@@ -683,29 +667,8 @@ export default function MainPage() {
                     </div>
                 </section>
             </main>
-            <footer id="footer" className="mt-5">
-                <Container>
-                    <h3>Skill Spark</h3>
-                    <p>
-                        Experience the freedom of variety with Skill Spark
-                    </p>
-                    <div className="social-links">
-                        <Link href="#" className="twitter"><i className="bx bxl-twitter"></i></Link>
-                        <Link href="#" className="facebook"><i className="bx bxl-facebook"></i></Link>
-                        <Link href="#" className="instagram"><i className="bx bxl-instagram"></i></Link>
-                        <Link href="#" className="google-plus"><i className="bx bxl-skype"></i></Link>
-                        <Link href="#" className="linkedin"><i className="bx bxl-linkedin"></i></Link>
-                    </div>
-                    <div className="copyright">
-                        &copy; Copyright <strong><span>Skill Spark</span></strong>. All Rights Reserved
-                    </div>
-                </Container>
-            </footer>
-            {isVisible && (
-                <div className="back-to-top d-flex align-items-center justify-content-center" onClick={scrollToTop}>
-                    <i className="bi bi-arrow-up"></i>
-                </div>
-            )}
+            <Footer />
+            <BackToTop />
         </div>
     );
 }
